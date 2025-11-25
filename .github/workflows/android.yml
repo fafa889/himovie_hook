@@ -1,0 +1,19 @@
+name: Android Build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gradle/gradle-build-action@v2
+      - name: Build APK
+        run: gradle build
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: himovie_hook
+          path: app/build/outputs/apk/debug/*.apk
