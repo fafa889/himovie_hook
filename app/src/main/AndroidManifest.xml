@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.hookmodule"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
+
+    <application
+        android:label="HiMovie Hook"
+        android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="xposedmodule" android:value="true"/>
+        <meta-data android:name="xposeddescription" android:value="Hook HiMovie API"/>
+        <meta-data android:name="xposedminversion" android:value="93"/>
+    </application>
+
+</manifest>
